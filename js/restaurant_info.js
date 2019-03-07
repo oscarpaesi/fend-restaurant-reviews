@@ -29,6 +29,8 @@ initMap = () => {
           'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         id: 'mapbox.streets'
       }).addTo(newMap);
+      newMap.on('focus', () => newMap.scrollWheelZoom.enable());
+      newMap.on('blur', () => newMap.scrollWheelZoom.disable());
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
