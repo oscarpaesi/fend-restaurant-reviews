@@ -283,6 +283,12 @@ nav h1 a {
 }
 
 /* ====================== Media Queries ====================== */
+@media screen and (max-device-width: 400px) {
+  #map {
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    height: auto;
+  }
+}
 @media screen and (max-device-width: 575px) {
   .filter-options {
     flex-direction: column;
