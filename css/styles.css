@@ -79,7 +79,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 50%;
 }
 
 /* Display list items side by side */
@@ -215,7 +215,7 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
+  height: calc(100% - 80px);
   position: fixed;
   right: 0;
   top: 80px;
@@ -287,15 +287,47 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
   position: relative;
   width: 85%;
 }
-#reviews-list li p {
-  margin: 0 0 10px;
-}
 #restaurant-hours td {
   color: #666;
+}
+#restaurant-img {
+  border-radius: 30px 0px 0px 0px;
+}
+.review-item {
+  border-radius: 30px 0px 30px 0px;
+}
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  height: 60px;
+  padding: 0 20px 0px;
+}
+.review-content {
+  padding: 0 20px 20px;
+}
+.review-name {
+  font-size: 16pt;
+  color: #fff;
+  margin: auto auto auto 0px;
+}
+.review-date {
+  font-size: 12pt;
+  color: #ddd;
+  margin: auto 0px auto auto;
+}
+.review-rating {
+  width: 100px;
+  background-color: #f18200;;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 12pt;
+  font-style: bold;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* ====================== Media Queries ====================== */
@@ -376,4 +408,58 @@ nav h1 a {
   }
 }
 
-/* ====================== Notes ============================== */
+/* ========= Restaurant Details ========== */
+@media screen and (max-device-width: 400px) {
+
+  #maincontent {
+    display: flex;
+    flex-direction: column;
+  }
+  .inside #map-container {
+    margin-top: 131px;
+    position: inherit;
+    width: 100%;
+  }
+  .inside #map {
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    height: auto;
+    z-index: 0;
+  }
+  .inside #footer {
+    bottom: unset;
+    position: inherit;
+    width: 100%;
+  }
+  #restaurant-name {
+    margin: 20px 0px;
+  }
+  #restaurant-img {
+    width: 100%;
+  }
+  #restaurant-cuisine {
+    width: 100%;
+  }
+  #restaurant-container {
+    width: 100%;
+    padding: 0px 10px;
+  }
+  #breadcrumb {
+    width: 100%;
+  }
+  #restaurant-name {
+    font-size: 16pt;
+  }
+  #reviews-container {
+    width: 100%;
+    padding: 0px 10px;
+  }
+  #reviews-container h2 {
+    font-size: 18pt;
+    margin: 20px 0px;
+  }
+  #reviews-list li {
+    margin: 0px;
+    width: 100%;
+  }
+}
+
