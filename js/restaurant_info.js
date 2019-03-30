@@ -19,6 +19,7 @@ initMap = () => {
       self.newMap = L.map('map', {
         center: [restaurant.latlng.lat, restaurant.latlng.lng],
         zoom: 16,
+        zoomControl: false,
         scrollWheelZoom: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
@@ -31,6 +32,7 @@ initMap = () => {
       }).addTo(newMap);
       newMap.on('focus', () => newMap.scrollWheelZoom.enable());
       newMap.on('blur', () => newMap.scrollWheelZoom.disable());
+      L.control.zoom({position: 'bottomleft'}).addTo(newMap);
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
