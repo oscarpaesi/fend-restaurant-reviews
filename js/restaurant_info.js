@@ -32,7 +32,7 @@ initMap = () => {
       }).addTo(newMap);
       newMap.on('focus', () => newMap.scrollWheelZoom.enable());
       newMap.on('blur', () => newMap.scrollWheelZoom.disable());
-      L.control.zoom({position: 'bottomleft'}).addTo(newMap);
+      L.control.zoom({position: 'bottomleft'}).addTo(newMap)
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
