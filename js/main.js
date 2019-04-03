@@ -22,7 +22,7 @@ registerServiceWorker = () => {
   if (!('serviceWorker' in navigator)) {
     console.log("Either the browser does not support Service Workers, or the page is not being served over 'https' or over 'http' on 'localhost'.");
   } else {
-    navigator.serviceWorker.register('/sw.js').then(reg => {
+    navigator.serviceWorker.register('./sw.js').then(reg => {
       console.log('Service Worker registered!');
     }).catch( err => {
       console.log('Could not register the Service Worker!', err);
