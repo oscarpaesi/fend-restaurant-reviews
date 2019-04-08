@@ -179,7 +179,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   width: 100%;
   padding: 10px;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 14pt;
@@ -390,7 +390,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 @media screen
     and (min-device-width: 501px)
     and (max-device-width: 575px) {
-  #restaurants-list li h1 {
+  #restaurants-list li h2 {
     margin-top: 10px;
     font-size: 12pt;
   }
